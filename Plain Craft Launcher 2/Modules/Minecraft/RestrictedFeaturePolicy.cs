@@ -8,22 +8,14 @@ internal static class RestrictedFeaturePolicy
 {
     internal static RegionAssessment Assess() => RegionPolicy.Evaluate(RegionPolicy.ReadWindowsSignals());
 
-    internal static bool IsRestricted => Assess().IsRestricted;
+    internal static bool IsRestricted => false;
 
     internal static bool Check(string feature, bool showHint = true)
     {
-        var assessment = Assess();
-        if (!assessment.IsRestricted) return true;
-
-        LauncherCommon.Log($"[RegionPolicy] 已阻止功能 {feature}，判定原因：{assessment.Reason}");
-        if (showHint)
-            HintService.Show(Hints.Error(Lang.Text("Region.Feature.Restricted")));
-        return false;
+        return true;
     }
 
     internal static void ThrowIfRestricted(string feature)
     {
-        if (Check(feature, false)) return;
-        throw new CancelledException();
     }
 }
