@@ -25,6 +25,7 @@
                         <RowDefinition Height="45" />
                         <RowDefinition Height="45" />
                         <RowDefinition Height="45" />
+                        <RowDefinition Height="45" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40" />
@@ -47,7 +48,7 @@
                         Title="{loc:Loc Setup.About.Community.Name}" />
                     <local:MyListItem
                         x:Name="ItemAboutPcl"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         Grid.Column="1"
                         Margin="-5,0,15,0"
                         Info="{Binding ViewModel.AboutInfo, RelativeSource={RelativeSource AncestorType=local:PageSetupAbout}}"
@@ -55,7 +56,7 @@
                         Title="{Binding Name}" />
                     <Image
                         x:Name="ImgPCLLogo"
-                        Grid.Row="2"
+                        Grid.Row="3"
                         Margin="3"
                         IsHitTestVisible="{Binding ViewModel.IsLogoClickEnabled, RelativeSource={RelativeSource AncestorType=local:PageSetupAbout}}"
                         MouseLeftButtonDown="ImgPCLLogo_Click"
@@ -98,10 +99,28 @@
                         local:CustomEventService.EventType="OpenUrl"
                         Text="{loc:Loc Setup.About.GitHubHome}" />
                     <local:MyButton
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Height="35"
+                        local:CustomEventService.EventData="https://github.com/StillPCL/PCL-CE"
+                        local:CustomEventService.EventType="OpenUrl"
+                        Text="{loc:Loc Setup.About.GitHubHome}" />
+                    <local:MyListItem
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="-5,0,15,0"
+                        Info="{loc:Loc Setup.About.Midstream.Info}"
+                        IsHitTestVisible="False"
+                        Title="PCL-CE" />
+                    <Image
+                        Grid.Row="2"
+                        Margin="3"
+                        Source="/Plain Craft Launcher 2;component/Images/Heads/Logo-CE.png" />
+                    <local:MyButton
                         Grid.Row="2"
                         Grid.Column="2"
                         Height="35"
-                        local:CustomEventService.EventData="https://github.com/PCL-Community/PCL2-CE"
+                        local:CustomEventService.EventData="https://github.com/PCL-Community/PCL-CE"
                         local:CustomEventService.EventType="OpenUrl"
                         Text="{loc:Loc Setup.About.SourceCode}" />
                 </Grid>
@@ -381,7 +400,7 @@
                         <local:MyButton
                             Margin="0,0,20,0"
                             ColorType="Highlight"
-                            local:CustomEventService.EventData="https://github.com/PCL-Community/PCL2-CE"
+                            local:CustomEventService.EventData="{Binding Version.BaseName, StringFormat='https://github.com/StillPCL/PCL-CE/tree/v{0}'}"
                             local:CustomEventService.EventType="OpenUrl"
                             Padding="13,0"
                             Text="{loc:Loc Setup.About.Legal.CommunitySource}" />
