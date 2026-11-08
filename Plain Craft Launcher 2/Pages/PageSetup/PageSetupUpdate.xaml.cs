@@ -105,7 +105,7 @@ public partial class PageSetupUpdate : IPageView
                         UpdateManager.IsCurrentVersionBeta
                             ? UpdateChannel.Beta
                             : UpdateChannel.Stable, SystemInfo.IsArm64System ? UpdateArch.Arm64 : UpdateArch.X64);
-                    _vm.UpdateNameText = "PCL CE " + VersionNameFormat(updateInfo.VersionName);
+                    _vm.UpdateNameText = "PCL-CE R " + VersionNameFormat(updateInfo.VersionName);
                     var summary = updateInfo.Changelog.Between("<summary>", "</summary>");
                     if (!updateInfo.Changelog.Contains("<summary>") || string.IsNullOrWhiteSpace(summary.Trim()))
                         _vm.ChangelogText = Lang.Text("Setup.Update.Changelog.Empty");

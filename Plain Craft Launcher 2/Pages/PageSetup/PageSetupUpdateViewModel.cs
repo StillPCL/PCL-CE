@@ -28,7 +28,7 @@ public partial class PageSetupUpdateViewModel : ViewModelBase
 
     public void Reload()
     {
-        CurrentVersionText = "PCL CE " + VersionNameFormat(Common.VersionBaseName);
+        CurrentVersionText = "PCL-CE R " + VersionNameFormat(Common.VersionBaseName);
         ChangelogText = Lang.Text("Setup.Update.Changelog.Placeholder");
     }
 
