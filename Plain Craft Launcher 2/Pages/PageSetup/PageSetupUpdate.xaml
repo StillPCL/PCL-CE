@@ -21,8 +21,6 @@
                             <RowDefinition Height="28" />
                             <RowDefinition Height="7" />
                             <RowDefinition Height="28" />
-                            <RowDefinition Height="7" />
-                            <RowDefinition Height="28" />
                         </Grid.RowDefinitions>
                         <TextBlock Text="{loc:Loc Setup.Update.Channel.Title}" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left"
                                    Margin="0,0,25,0" />
@@ -48,14 +46,6 @@
                             <local:MyComboBoxItem Content="{loc:Loc Setup.Update.Auto.NotifyOnly}" ToolTip="{loc:Loc Setup.Update.Auto.NotifyOnly.ToolTip}" />
                             <local:MyComboBoxItem Content="{loc:Loc Setup.Update.Auto.Disabled}" ToolTip="{loc:Loc Setup.Update.Auto.Disabled.ToolTip}" />
                         </local:MyComboBox>
-                        <TextBlock Text="{loc:Loc Setup.Update.MirrorChyanCdk.Label}" Grid.Row="4" VerticalAlignment="Center"
-                                   HorizontalAlignment="Left" Margin="0,0,25,0" />
-                        <PasswordBox x:Name="TextMirrorCDK"
-                                      ToolTip="{loc:Loc Setup.Update.MirrorChyanCdk.ToolTip}"
-                                     Grid.Row="4" Grid.Column="1"
-                                     PasswordChanged="TextMirrorCDK_PasswordChanged" />
-                        <local:MyButton x:Name="BtnGetMirrorCDK" Text="{loc:Loc Setup.Update.MirrorChyanCdk.Get}" Grid.Column="3" Grid.Row="4"
-                                        ColorType="Highlight" Click="BtnGetMirrorCDK_Click" />
                     </Grid>
                 </StackPanel>
             </local:MyCard>

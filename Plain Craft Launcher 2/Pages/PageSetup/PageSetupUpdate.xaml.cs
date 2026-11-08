@@ -47,7 +47,6 @@ public partial class PageSetupUpdate : IPageView
     private void Init()
     {
         Animations.AniBeginControl();
-        TextMirrorCDK.Password = Config.Update.MirrorChyanKey;
 
         ComboSystemUpdateChannel.SelectedIndex = (int)Config.Update.UpdateChannel;
         ComboSystemUpdateMode.SelectedIndex = (int)Config.Update.UpdateMode;
@@ -321,11 +320,6 @@ public partial class PageSetupUpdate : IPageView
         {
             _vm.ChannelEnabled = true;
         }
-    }
-
-    private void TextMirrorCDK_PasswordChanged(object sender, EventArgs e)
-    {
-        Config.Update.MirrorChyanKey = TextMirrorCDK.Password;
     }
 
     private void BtnGetMirrorCDK_Click(object sender, MouseButtonEventArgs e)
