@@ -335,7 +335,7 @@ public partial class PageSetupUpdate : IPageView
 
     private void BtnChangelog_Click(object sender, MouseButtonEventArgs e)
     {
-        Common.OpenWebsite("https://github.com/PCL-Community/PCL2-CE/releases/v" + Common.VersionBaseName);
+        Common.OpenWebsite("https://github.com/StillPCL/PCL-CE/releases/tag/v" + Common.VersionBaseName);
     }
 
     public string VersionNameFormat(string str) => PageSetupUpdateViewModel.VersionNameFormat(str);
