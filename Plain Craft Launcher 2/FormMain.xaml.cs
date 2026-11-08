@@ -53,7 +53,7 @@ public partial class FormMain
                 Buttons = DialogButtons.Create("Common.Action.Confirm", "Main.UpdateLog.FullChangelog"),
                 ForceWait = true
             }).Result?.Button ?? 0) ==
-                2) Common.OpenWebsite("https://github.com/PCL-Community/PCL2-CE/releases");
+                2) Common.OpenWebsite("https://github.com/StillPCL/PCL-CE/releases");
         }, "UpdateLog Output");
     }
 
@@ -253,7 +253,7 @@ public partial class FormMain
                         Content = $"{hint}{"\r\n"}{"\r\n"}{Lang.Text("Main.SpecialVersion.HideHintNotice")}",
                         Buttons = DialogButtons.From(DialogButton.Create(Lang.Text("Main.SpecialVersion.IUnderstand")), DialogButton.Create(Lang.Text("Main.SpecialVersion.OpenDownloadPageAndExit"), () =>
                         {
-                            Common.OpenWebsite("https://github.com/PCL-Community/PCL2-CE/releases/latest");
+                            Common.OpenWebsite("https://github.com/StillPCL/PCL-CE/releases/latest");
                             EndProgram(false);
                         })),
                         IsWarn = true,

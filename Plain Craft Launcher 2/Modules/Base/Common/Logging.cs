@@ -361,7 +361,7 @@ public static partial class Common
                 == 1);
         if (shouldOpenLogFolder)
             OpenExplorer(ExePath + @"PCL\Log\");
-        OpenWebsite("https://github.com/PCL-Community/PCL2-CE/issues/");
+        OpenWebsite("https://github.com/StillPCL/PCL-CE/issues/");
     }
 
     /// <summary>
